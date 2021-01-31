@@ -16,18 +16,11 @@ class GameTest {
 	}
 
 	@Test
-	void testOneThrow() {
-		game.add(5);
-		assertEquals(5, game.getScore());
-		assertEquals(1, game.getCurrentFrame());
-	}
-
-	@Test
 	void testTwoThrowsNoMark() {
 		game.add(5);
 		game.add(4);
-		assertEquals(9, game.getScore());
-		assertEquals(1, game.getCurrentFrame());
+		assertEquals(9, game.score());
+		assertEquals(2, game.getCurrentFrame());
 	}
 
 	@Test
@@ -36,10 +29,10 @@ class GameTest {
 		game.add(4);
 		game.add(7);
 		game.add(2);
-		assertEquals(18, game.getScore());
+		assertEquals(18, game.score());
 		assertEquals(9, game.scoreForFrame(1));
 		assertEquals(18, game.scoreForFrame(2));
-		assertEquals(2, game.getCurrentFrame());
+		assertEquals(3, game.getCurrentFrame());
 	}
 
 	@Test
@@ -47,18 +40,39 @@ class GameTest {
 		game.add(3);
 		game.add(7);
 		game.add(3);
+		assertEquals(13, game.scoreForFrame(1));
+		assertEquals(2, game.getCurrentFrame());
+	}
+
+	@Test
+	void testSimpleFrameAfterSpare() {
+		game.add(3);
+		game.add(7);
+		game.add(3);
 		game.add(2);
 		assertEquals(13, game.scoreForFrame(1));
 		assertEquals(18, game.scoreForFrame(2));
+		assertEquals(18, game.score());
+		assertEquals(3, game.getCurrentFrame());
 	}
 
-//	@Test
-//	void testSimpleFrameAfterSpare() {
-//		game.add(3);
-//		game.add(7);
-//		game.add(3);
-//		game.add(2);
-//		assertEquals(18, game.getScore());
-//	}
+	@Test
+	void testSimpleStrike() {
+		game.add(10);
+		game.add(3);
+		game.add(6);
+		assertEquals(19, game.scoreForFrame(1));
+		assertEquals(28, game.score());
+		assertEquals(3, game.getCurrentFrame());
+	}
+
+	@Test
+	void testPerfectGame() {
+		for (int i = 0; i < 12; i++) {
+			game.add(10);
+		}
+		assertEquals(300, game.score());
+		assertEquals(11, game.getCurrentFrame());
+	}
 
 }
