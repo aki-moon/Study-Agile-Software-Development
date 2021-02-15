@@ -8,13 +8,13 @@ public class FtocRaw {
 		InputStreamReader inputStreamReader = new InputStreamReader(System.in);
 		BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 		boolean done = false;
-		while(!done) {
+		while (!done) {
 			String fahrString = bufferedReader.readLine();
-			if(fahrString == null || fahrString .length() == 0) {
+			if (fahrString == null || fahrString.length() == 0) {
 				done = false;
 			} else {
 				double fahr = Double.parseDouble(fahrString);
-				double celsius = 5.0/9.0*(fahr-32);
+				double celsius = 5.0 / 9.0 * (fahr - 32);
 				System.out.println("F=" + fahr + ", C=" + celsius);
 			}
 		}

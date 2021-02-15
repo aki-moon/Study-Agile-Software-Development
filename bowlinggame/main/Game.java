@@ -1,4 +1,4 @@
-package bowlinggame.main;
+package agilesoftwaredevelopment.bowlinggame.main;
 
 public class Game {
 	private int itsCurrentFrame = 1;

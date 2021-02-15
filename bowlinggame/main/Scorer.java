@@ -1,4 +1,4 @@
-package bowlinggame.main;
+package agilesoftwaredevelopment.bowlinggame.main;
 
 public class Scorer {
 	private int ball;

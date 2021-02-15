@@ -1,11 +1,11 @@
-package bowlinggame.test;
+package agilesoftwaredevelopment.bowlinggame.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import bowlinggame.main.Game;
+import agilesoftwaredevelopment.bowlinggame.main.Game;
 
 class GameTest {
 	private Game game;
