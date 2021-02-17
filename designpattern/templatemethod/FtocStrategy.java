@@ -4,35 +4,31 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class FtocTemplateMethod extends ApplicationBeforeRefactoring {
+public class FtocStrategy implements Application {
 	private InputStreamReader inputStreamReader;
 	private BufferedReader bufferedReader;
+	private boolean isDone = false;
 
-	public static void main(String[] args) throws Exception {
-		new FtocTemplateMethod().run();
+	public static void main(String[] args) {
+		new ApplicationRunner(new FtocStrategy()).run();
 	}
 
 	@Override
-	protected void init() {
+	public void init() {
 		inputStreamReader = new InputStreamReader(System.in);
 		bufferedReader = new BufferedReader(inputStreamReader);
 	}
 
 	@Override
-	protected void idle() {
+	public void idle() {
 		String fahrString = readLineAndReturnNullIfError();
 		if (fahrString == null || fahrString.length() == 0) {
-			setDone();
+			isDone = true;
 		} else {
 			double fahr = Double.parseDouble(fahrString);
 			double celsius = 5.0 / 9.0 * (fahr - 32);
 			System.out.println("F=" + fahr + ", C=" + celsius);
 		}
-	}
-
-	@Override
-	protected void cleanup() {
-		System.out.println("ftoc exit");
 	}
 
 	private String readLineAndReturnNullIfError() {
@@ -43,6 +39,16 @@ public class FtocTemplateMethod extends ApplicationBeforeRefactoring {
 			string = null;
 		}
 		return string;
+	}
+
+	@Override
+	public boolean done() {
+		return isDone;
+	}
+
+	@Override
+	public void cleanup() {
+		System.out.println("ftoc exit");
 	}
 
 }

@@ -1,27 +1,13 @@
 package agilesoftwaredevelopment.designpattern.templatemethod;
 
-public abstract class Application {
-	private boolean isDone = false;
+public interface Application {
 
-	protected abstract void init();
+	void init();
 
-	protected abstract void idle();
+	void idle();
 
-	protected abstract void cleanup();
+	boolean done();
 
-	protected void setDone() {
-		isDone = true;
-	}
+	void cleanup();
 
-	protected boolean done() {
-		return isDone;
-	};
-
-	public void run() {
-		init();
-		while (!done()) {
-			idle();
-		}
-		cleanup();
-	}
 }
