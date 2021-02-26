@@ -2,4 +2,7 @@ package agilesoftwaredevelopment.paymentstudy;
 
 public class MonthlySchedule extends PaymentSchedule{
 
+	public MonthlySchedule(double itsSalary) {
+	}
+
 }

@@ -1,14 +1,21 @@
 package agilesoftwaredevelopment.paymentstudy;
 
-public class AddSalariedEmployee {
+public class AddSalariedEmployee extends AddEmployeeTransaction {
+	private double itsSalary;
 
-	public AddSalariedEmployee(int empId, String string, String string2, double d) {
-		// TODO 自動生成されたコンストラクター・スタブ
+	public AddSalariedEmployee(int empId, String name, String address, double salary) {
+		super(empId, name, address);
+		itsSalary = salary;
 	}
 
-	public void execute() {
-		// TODO 自動生成されたメソッド・スタブ
+	@Override
+	protected PaymentSchedule getScheduled() {
+		return new MonthlySchedule(itsSalary);
+	}
 
+	@Override
+	protected PaymentClassification getClassfication() {
+		return new SalariedClassification();
 	}
 
 }
