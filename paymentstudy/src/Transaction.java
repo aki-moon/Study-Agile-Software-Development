@@ -1,4 +1,4 @@
-package agilesoftwaredevelopment.paymentstudy;
+package agilesoftwaredevelopment.paymentstudy.src;
 
 public interface Transaction {
 	void execute();

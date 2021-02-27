@@ -1,4 +1,4 @@
-package agilesoftwaredevelopment.paymentstudy;
+package agilesoftwaredevelopment.paymentstudy.src;
 
 public class AddSalariedEmployee extends AddEmployeeTransaction {
 	private double itsSalary;

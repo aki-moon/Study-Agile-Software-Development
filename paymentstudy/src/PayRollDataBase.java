@@ -1,4 +1,4 @@
-package agilesoftwaredevelopment.paymentstudy;
+package agilesoftwaredevelopment.paymentstudy.src;
 
 import java.util.HashMap;
 import java.util.Map;
