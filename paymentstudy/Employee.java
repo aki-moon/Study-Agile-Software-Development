@@ -4,6 +4,9 @@ public class Employee {
 	private int itsEmpId;
 	private String itsName;
 	private String itsAddress;
+	private PaymentClassification classification;
+	private PaymentSchedule schedule;
+	private PaymentMethod method;
 
 	public Employee(int itsEmpId, String itsName, String itsAddress) {
 		this.itsEmpId = itsEmpId;
@@ -24,24 +27,27 @@ public class Employee {
 	}
 
 	public PaymentClassification getClassfication() {
-		return null;
+		return classification;
 	}
 
 	public PaymentSchedule getSchedule() {
-		return null;
+		return schedule;
 	}
 
 	public PaymentMethod getMethod() {
-		return null;
+		return method;
 	}
 
 	public void setClassfication(PaymentClassification classification) {
+		this.classification = classification;
 	}
 
 	public void setSchedule(PaymentSchedule paymentSchedule) {
+		this.schedule = paymentSchedule;
 	}
 
 	public void setMethod(PaymentMethod method) {
+		this.method = method;
 	}
 
 }
