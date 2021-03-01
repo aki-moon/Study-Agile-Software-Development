@@ -5,7 +5,7 @@ public class AddSalariedEmployee extends AddEmployeeTransaction {
 
 	public AddSalariedEmployee(int empId, String name, String address, double salary) {
 		super(empId, name, address);
-		itsSalary = salary;
+		this.itsSalary = salary;
 	}
 
 	@Override

@@ -1,5 +1,5 @@
 package agilesoftwaredevelopment.paymentstudy.src;
 
-public class PaymentClassification {
+public interface PaymentClassification {
 
 }

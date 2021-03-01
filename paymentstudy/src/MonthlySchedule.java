@@ -1,6 +1,6 @@
 package agilesoftwaredevelopment.paymentstudy.src;
 
-public class MonthlySchedule extends PaymentSchedule{
+public class MonthlySchedule implements PaymentSchedule {
 
 	public MonthlySchedule() {
 	}
