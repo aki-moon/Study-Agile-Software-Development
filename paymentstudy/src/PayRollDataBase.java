@@ -18,4 +18,8 @@ public class PayRollDataBase {
 		itsEmployees.clear();
 	}
 
+	public static void deleteEmployee(int itsEmpId) {
+		itsEmployees.remove(itsEmpId);
+	}
+
 }
