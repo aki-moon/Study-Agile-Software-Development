@@ -12,4 +12,8 @@ public class HourlyClassification implements PaymentClassification{
 		return hourlyRate;
 	}
 
+	public TimeCard getTimeCard(String timecardDate) {
+		return null;
+	}
+
 }
