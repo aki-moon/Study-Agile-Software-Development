@@ -31,7 +31,7 @@ class TimeCardTransactionTest {
 		assertNotNull(hourlyClassification);
 		TimeCard timeCard = hourlyClassification.getTimeCard(timecardDate);
 		assertNotNull(timeCard);
-		assertThat("assert hours", 1000.00 == timeCard.getHours());
+		assertThat("assert hours", 8.0 == timeCard.getHours());
 	}
 
 }
