@@ -8,9 +8,9 @@ import javax.swing.event.DocumentListener;
 
 public class QuickEntryMediator {
 	private JTextField itsTextField;
-	private JList itsList;
+	private JList<?> itsList;
 
-	public QuickEntryMediator(JTextField textField, JList list) {
+	public QuickEntryMediator(JTextField textField, JList<?> list) {
 		itsTextField = textField;
 		itsList = list;
 		itsTextField.getDocument().addDocumentListener(new DocumentListener() {
@@ -37,7 +37,7 @@ public class QuickEntryMediator {
 			itsList.clearSelection();
 			return;
 		}
-		ListModel listModel = itsList.getModel();
+		ListModel<?> listModel = itsList.getModel();
 		boolean found = false;
 		for (int i = 0; found == false && i < listModel.getSize(); i++) {
 			Object object = listModel.getElementAt(i);
