@@ -1,6 +1,6 @@
 package agilesoftwaredevelopment.paymentstudy.src.classfication;
 
-public class SalariedClassification implements PaymentClassification{
+public class SalariedClassification implements PaymentClassification {
 	private double itsSalary;
 
 	public SalariedClassification(double itsSalary) {

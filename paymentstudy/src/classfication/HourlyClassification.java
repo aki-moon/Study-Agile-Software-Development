@@ -2,7 +2,7 @@ package agilesoftwaredevelopment.paymentstudy.src.classfication;
 
 import agilesoftwaredevelopment.paymentstudy.src.timecard.TimeCard;
 
-public class HourlyClassification implements PaymentClassification{
+public class HourlyClassification implements PaymentClassification {
 
 	private double hourlyRate;
 	private TimeCard card;
@@ -15,7 +15,7 @@ public class HourlyClassification implements PaymentClassification{
 		return hourlyRate;
 	}
 
-	public TimeCard getTimeCard(String timecardDate) {
+	public TimeCard timeCard() {
 		return card;
 	}
 

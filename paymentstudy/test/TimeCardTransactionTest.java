@@ -29,7 +29,7 @@ class TimeCardTransactionTest {
 		PaymentClassification classification = employee.getClassfication();
 		HourlyClassification hourlyClassification = (HourlyClassification) classification;
 		assertNotNull(hourlyClassification);
-		TimeCard timeCard = hourlyClassification.getTimeCard(timecardDate);
+		TimeCard timeCard = hourlyClassification.timeCard();
 		assertNotNull(timeCard);
 		assertThat("assert hours", 8.0 == timeCard.getHours());
 	}

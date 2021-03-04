@@ -5,7 +5,7 @@ import agilesoftwaredevelopment.paymentstudy.src.classfication.PaymentClassifica
 import agilesoftwaredevelopment.paymentstudy.src.schedule.BiWeeklySchedule;
 import agilesoftwaredevelopment.paymentstudy.src.schedule.PaymentSchedule;
 
-public class AddCommissionedEmployee extends AddEmployeeTransaction  {
+public class AddCommissionedEmployee extends AddEmployeeTransaction {
 
 	private double salary;
 	private double commissionRate;
