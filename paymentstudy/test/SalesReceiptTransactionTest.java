@@ -13,12 +13,12 @@ import agilesoftwaredevelopment.paymentstudy.src.timecard.TimeCard;
 import agilesoftwaredevelopment.paymentstudy.src.transaction.AddHourlyEmployee;
 import agilesoftwaredevelopment.paymentstudy.src.transaction.TimeCardTransaction;
 
-class TimeCardTransactionTest {
+class SalesReceiptTransactionTest {
 
 	@Test
-	void timeCardTransactionTest() {
-		System.err.println("timeCardTransactionTest");
-		int empId = 2;
+	void salesReceiptTransactionTest() {
+		System.err.println("salesReceiptTransactionTest");
+		int empId = 3;
 		AddHourlyEmployee addHourlyEmployee = new AddHourlyEmployee(empId, "Bill", "Home", 15.25);
 		addHourlyEmployee.execute();
 		String timecardDate = "20210303";

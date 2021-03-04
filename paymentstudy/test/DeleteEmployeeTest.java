@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import agilesoftwaredevelopment.paymentstudy.src.AddCommissionedEmployee;
-import agilesoftwaredevelopment.paymentstudy.src.DeleteEmployeeTransaction;
-import agilesoftwaredevelopment.paymentstudy.src.Employee;
-import agilesoftwaredevelopment.paymentstudy.src.PayRollDataBase;
+import agilesoftwaredevelopment.paymentstudy.src.database.PayRollDataBase;
+import agilesoftwaredevelopment.paymentstudy.src.employee.Employee;
+import agilesoftwaredevelopment.paymentstudy.src.transaction.AddCommissionedEmployee;
+import agilesoftwaredevelopment.paymentstudy.src.transaction.DeleteEmployeeTransaction;
 
 class DeleteEmployeeTest {
 

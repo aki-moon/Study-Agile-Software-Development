@@ -5,15 +5,15 @@ import static org.junit.Assert.*;
 
 import org.junit.jupiter.api.Test;
 
-import agilesoftwaredevelopment.paymentstudy.src.AddCommissionedEmployee;
-import agilesoftwaredevelopment.paymentstudy.src.BiWeeklySchedule;
-import agilesoftwaredevelopment.paymentstudy.src.CommissionedClassification;
-import agilesoftwaredevelopment.paymentstudy.src.Employee;
-import agilesoftwaredevelopment.paymentstudy.src.HoldMethod;
-import agilesoftwaredevelopment.paymentstudy.src.PayRollDataBase;
-import agilesoftwaredevelopment.paymentstudy.src.PaymentClassification;
-import agilesoftwaredevelopment.paymentstudy.src.PaymentMethod;
-import agilesoftwaredevelopment.paymentstudy.src.PaymentSchedule;
+import agilesoftwaredevelopment.paymentstudy.src.classfication.CommissionedClassification;
+import agilesoftwaredevelopment.paymentstudy.src.classfication.PaymentClassification;
+import agilesoftwaredevelopment.paymentstudy.src.database.PayRollDataBase;
+import agilesoftwaredevelopment.paymentstudy.src.employee.Employee;
+import agilesoftwaredevelopment.paymentstudy.src.method.HoldMethod;
+import agilesoftwaredevelopment.paymentstudy.src.method.PaymentMethod;
+import agilesoftwaredevelopment.paymentstudy.src.schedule.BiWeeklySchedule;
+import agilesoftwaredevelopment.paymentstudy.src.schedule.PaymentSchedule;
+import agilesoftwaredevelopment.paymentstudy.src.transaction.AddCommissionedEmployee;
 
 class AddCommissionedEmployeeTest {
 

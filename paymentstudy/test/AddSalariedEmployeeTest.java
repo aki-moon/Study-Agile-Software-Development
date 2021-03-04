@@ -5,15 +5,15 @@ import static org.junit.Assert.*;
 
 import org.junit.jupiter.api.Test;
 
-import agilesoftwaredevelopment.paymentstudy.src.AddSalariedEmployee;
-import agilesoftwaredevelopment.paymentstudy.src.Employee;
-import agilesoftwaredevelopment.paymentstudy.src.HoldMethod;
-import agilesoftwaredevelopment.paymentstudy.src.MonthlySchedule;
-import agilesoftwaredevelopment.paymentstudy.src.PayRollDataBase;
-import agilesoftwaredevelopment.paymentstudy.src.PaymentClassification;
-import agilesoftwaredevelopment.paymentstudy.src.PaymentMethod;
-import agilesoftwaredevelopment.paymentstudy.src.PaymentSchedule;
-import agilesoftwaredevelopment.paymentstudy.src.SalariedClassification;
+import agilesoftwaredevelopment.paymentstudy.src.classfication.PaymentClassification;
+import agilesoftwaredevelopment.paymentstudy.src.classfication.SalariedClassification;
+import agilesoftwaredevelopment.paymentstudy.src.database.PayRollDataBase;
+import agilesoftwaredevelopment.paymentstudy.src.employee.Employee;
+import agilesoftwaredevelopment.paymentstudy.src.method.HoldMethod;
+import agilesoftwaredevelopment.paymentstudy.src.method.PaymentMethod;
+import agilesoftwaredevelopment.paymentstudy.src.schedule.MonthlySchedule;
+import agilesoftwaredevelopment.paymentstudy.src.schedule.PaymentSchedule;
+import agilesoftwaredevelopment.paymentstudy.src.transaction.AddSalariedEmployee;
 
 class AddSalariedEmployeeTest {
 
