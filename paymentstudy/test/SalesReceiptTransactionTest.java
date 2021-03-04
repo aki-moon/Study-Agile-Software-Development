@@ -1,17 +1,17 @@
 package agilesoftwaredevelopment.paymentstudy.test;
 
-import static org.hamcrest.MatcherAssert.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.Test;
 
-import agilesoftwaredevelopment.paymentstudy.src.classfication.HourlyClassification;
+import agilesoftwaredevelopment.paymentstudy.src.classfication.CommissionedClassification;
 import agilesoftwaredevelopment.paymentstudy.src.classfication.PaymentClassification;
 import agilesoftwaredevelopment.paymentstudy.src.database.PayRollDataBase;
 import agilesoftwaredevelopment.paymentstudy.src.employee.Employee;
-import agilesoftwaredevelopment.paymentstudy.src.timecard.TimeCard;
-import agilesoftwaredevelopment.paymentstudy.src.transaction.AddHourlyEmployee;
-import agilesoftwaredevelopment.paymentstudy.src.transaction.TimeCardTransaction;
+import agilesoftwaredevelopment.paymentstudy.src.salesraciept.SalesReceipt;
+import agilesoftwaredevelopment.paymentstudy.src.transaction.AddCommissionedEmployee;
+import agilesoftwaredevelopment.paymentstudy.src.transaction.SalesReceiptTransaction;
 
 class SalesReceiptTransactionTest {
 
@@ -19,19 +19,19 @@ class SalesReceiptTransactionTest {
 	void salesReceiptTransactionTest() {
 		System.err.println("salesReceiptTransactionTest");
 		int empId = 3;
-		AddHourlyEmployee addHourlyEmployee = new AddHourlyEmployee(empId, "Bill", "Home", 15.25);
-		addHourlyEmployee.execute();
-		String timecardDate = "20210303";
-		TimeCardTransaction timeCardTransaction = new TimeCardTransaction(timecardDate, 8.0, empId);
-		timeCardTransaction.execute();
+		AddCommissionedEmployee addCommissionedEmployee = new AddCommissionedEmployee(empId, "Aki", "Tokyo", 30, 0.1);
+		addCommissionedEmployee.execute();
+		String SalesReceiptDate = "20210304";
+		SalesReceiptTransaction salesReceiptTransaction = new SalesReceiptTransaction(SalesReceiptDate, 100000, empId);
+		salesReceiptTransaction.execute();
 		Employee employee = PayRollDataBase.getEmployee(empId);
 		assertNotNull(employee);
 		PaymentClassification classification = employee.getClassfication();
-		HourlyClassification hourlyClassification = (HourlyClassification) classification;
-		assertNotNull(hourlyClassification);
-		TimeCard timeCard = hourlyClassification.getTimeCard(timecardDate);
-		assertNotNull(timeCard);
-		assertThat("assert hours", 8.0 == timeCard.getHours());
+		CommissionedClassification commisionedClassification = (CommissionedClassification) classification;
+		assertNotNull(commisionedClassification);
+		SalesReceipt salesReceipt = commisionedClassification.getSalesReceipt();
+		assertNotNull(salesReceipt);
+		assertEquals(100000, salesReceipt.amount());
 	}
 
 }

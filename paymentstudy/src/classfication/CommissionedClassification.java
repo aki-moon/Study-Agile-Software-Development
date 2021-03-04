@@ -1,9 +1,12 @@
 package agilesoftwaredevelopment.paymentstudy.src.classfication;
 
-public class CommissionedClassification implements PaymentClassification{
+import agilesoftwaredevelopment.paymentstudy.src.salesraciept.SalesReceipt;
+
+public class CommissionedClassification implements PaymentClassification {
 
 	private double salary;
 	private double commisonRate;
+	private SalesReceipt salesReceipt;
 
 	public CommissionedClassification(double salary, double commissionRate) {
 		this.salary = salary;
@@ -16,6 +19,14 @@ public class CommissionedClassification implements PaymentClassification{
 
 	public double commisionRate() {
 		return commisonRate;
+	}
+
+	public SalesReceipt getSalesReceipt() {
+		return salesReceipt;
+	}
+
+	public void addSalesReceipt(SalesReceipt salesReceipt) {
+		this.salesReceipt = salesReceipt;
 	}
 
 }
