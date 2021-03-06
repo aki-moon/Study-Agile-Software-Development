@@ -1,5 +1,6 @@
 package agilesoftwaredevelopment.paymentstudy.src.employee;
 
+import agilesoftwaredevelopment.paymentstudy.src.affrication.Afflication;
 import agilesoftwaredevelopment.paymentstudy.src.classfication.PaymentClassification;
 import agilesoftwaredevelopment.paymentstudy.src.method.PaymentMethod;
 import agilesoftwaredevelopment.paymentstudy.src.schedule.PaymentSchedule;
@@ -11,6 +12,7 @@ public class Employee {
 	private PaymentClassification classification;
 	private PaymentSchedule schedule;
 	private PaymentMethod method;
+	private Afflication afflication;
 
 	public Employee(int itsEmpId, String itsName, String itsAddress) {
 		this.itsEmpId = itsEmpId;
@@ -42,6 +44,10 @@ public class Employee {
 		return method;
 	}
 
+	public Afflication getAfflication() {
+		return afflication;
+	}
+
 	public void setClassfication(PaymentClassification classification) {
 		this.classification = classification;
 	}
@@ -52,6 +58,10 @@ public class Employee {
 
 	public void setMethod(PaymentMethod method) {
 		this.method = method;
+	}
+
+	public void setAfflication(Afflication afflication) {
+		this.afflication = afflication;
 	}
 
 }
