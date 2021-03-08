@@ -68,4 +68,8 @@ public class Employee {
 		this.itsName = name;
 	}
 
+	public void setAddress(String address) {
+		this.itsAddress = address;
+	}
+
 }
