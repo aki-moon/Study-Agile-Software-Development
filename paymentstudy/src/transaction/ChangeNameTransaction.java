@@ -1,12 +1,18 @@
 package agilesoftwaredevelopment.paymentstudy.src.transaction;
 
-public class ChangeNameTransaction implements Transaction{
+import agilesoftwaredevelopment.paymentstudy.src.employee.Employee;
+
+public class ChangeNameTransaction extends ChangeEmployeeTransaction {
+	private String name;
 
 	public ChangeNameTransaction(int empId, String name) {
+		super(empId);
+		this.name = name;
 	}
 
 	@Override
-	public void execute() {
+	void change(Employee employee) {
+		employee.setName(name);
 	}
 
 }

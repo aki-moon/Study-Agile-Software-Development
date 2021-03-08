@@ -64,4 +64,8 @@ public class Employee {
 		this.afflication = afflication;
 	}
 
+	public void setName(String name) {
+		this.itsName = name;
+	}
+
 }
