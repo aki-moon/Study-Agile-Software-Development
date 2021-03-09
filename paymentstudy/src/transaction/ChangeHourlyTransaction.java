@@ -1,17 +1,27 @@
 package agilesoftwaredevelopment.paymentstudy.src.transaction;
 
-import agilesoftwaredevelopment.paymentstudy.src.employee.Employee;
+import agilesoftwaredevelopment.paymentstudy.src.classfication.HourlyClassification;
+import agilesoftwaredevelopment.paymentstudy.src.classfication.PaymentClassification;
+import agilesoftwaredevelopment.paymentstudy.src.schedule.PaymentSchedule;
+import agilesoftwaredevelopment.paymentstudy.src.schedule.WeeklySchedule;
 
-public class ChangeHourlyTransaction extends ChangeEmployeeTransaction {
+public class ChangeHourlyTransaction extends ChangeClassficationTransaction {
+
+	private double rate;
 
 	public ChangeHourlyTransaction(int empId, double rate) {
 		super(empId);
+		this.rate = rate;
 	}
 
 	@Override
-	void change(Employee employee) {
-		// TODO 自動生成されたメソッド・スタブ
+	PaymentSchedule getSchedule() {
+		return new WeeklySchedule();
+	}
 
+	@Override
+	PaymentClassification getClassfication() {
+		return new HourlyClassification(rate);
 	}
 
 }

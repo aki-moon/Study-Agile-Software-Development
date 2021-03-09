@@ -4,8 +4,12 @@ import static org.junit.Assert.*;
 
 import org.junit.jupiter.api.Test;
 
+import agilesoftwaredevelopment.paymentstudy.src.classfication.HourlyClassification;
+import agilesoftwaredevelopment.paymentstudy.src.classfication.PaymentClassification;
 import agilesoftwaredevelopment.paymentstudy.src.database.PayRollDataBase;
 import agilesoftwaredevelopment.paymentstudy.src.employee.Employee;
+import agilesoftwaredevelopment.paymentstudy.src.schedule.PaymentSchedule;
+import agilesoftwaredevelopment.paymentstudy.src.schedule.WeeklySchedule;
 import agilesoftwaredevelopment.paymentstudy.src.transaction.AddCommissionedEmployee;
 import agilesoftwaredevelopment.paymentstudy.src.transaction.ChangeHourlyTransaction;
 
@@ -22,6 +26,14 @@ class ChangeHourlyTransactionTest {
 		changeHourlyTransaction.execute();
 		Employee employee = PayRollDataBase.getEmployee(empId);
 		assertNotNull(employee);
+		PaymentClassification paymentClassification = employee.getClassfication();
+		assertNotNull(paymentClassification);
+		HourlyClassification hourlyClassification = (HourlyClassification) paymentClassification;
+		assertNotNull(hourlyClassification);
+		assertTrue(27.52 == hourlyClassification.hourlyRate());
+		PaymentSchedule paymentSchedule = employee.getSchedule();
+		WeeklySchedule weeklySchedule = (WeeklySchedule) paymentSchedule;
+		assertNotNull(weeklySchedule);
 	}
 
 }
