@@ -40,7 +40,7 @@ public class Employee {
 		return schedule;
 	}
 
-	public PaymentMethod getMethod() {
+	public PaymentMethod method() {
 		return method;
 	}
 

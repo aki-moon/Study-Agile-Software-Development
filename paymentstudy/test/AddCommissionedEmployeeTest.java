@@ -34,7 +34,7 @@ class AddCommissionedEmployeeTest {
 		PaymentSchedule paymentSchedule = employee.getSchedule();
 		BiWeeklySchedule biWeeklySchedule = (BiWeeklySchedule) paymentSchedule;
 		assertNotNull(biWeeklySchedule);
-		PaymentMethod paymentMethod = employee.getMethod();
+		PaymentMethod paymentMethod = employee.method();
 		HoldMethod holdMethod = (HoldMethod) paymentMethod;
 		assertNotNull(holdMethod);
 	}

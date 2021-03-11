@@ -33,7 +33,7 @@ class AddSalariedEmployeeTest {
 		PaymentSchedule paymentSchedule = employee.getSchedule();
 		MonthlySchedule monthlySchedule = (MonthlySchedule) paymentSchedule;
 		assertNotNull(monthlySchedule);
-		PaymentMethod paymentMethod = employee.getMethod();
+		PaymentMethod paymentMethod = employee.method();
 		HoldMethod holdMethod = (HoldMethod) paymentMethod;
 		assertNotNull(holdMethod);
 	}
