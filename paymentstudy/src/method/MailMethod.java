@@ -1,4 +1,5 @@
 package agilesoftwaredevelopment.paymentstudy.src.method;
 
-public class HoldMethod implements PaymentMethod {
+public class MailMethod implements PaymentMethod {
+
 }
