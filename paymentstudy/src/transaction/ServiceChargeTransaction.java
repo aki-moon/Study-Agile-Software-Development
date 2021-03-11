@@ -20,7 +20,7 @@ public class ServiceChargeTransaction implements Transaction {
 	@Override
 	public void execute() {
 		Employee employee = PayRollDataBase.getEmployee(memberId);
-		Afflication afflication = employee.getAfflication();
+		Afflication afflication = employee.afflication();
 		if(afflication instanceof UnionAfflication) {
 			UnionAfflication unionAfflication = (UnionAfflication) afflication;
 			unionAfflication.addServiceCharge(date, amount);

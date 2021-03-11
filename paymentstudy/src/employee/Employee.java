@@ -44,7 +44,7 @@ public class Employee {
 		return method;
 	}
 
-	public Afflication getAfflication() {
+	public Afflication afflication() {
 		return afflication;
 	}
 
