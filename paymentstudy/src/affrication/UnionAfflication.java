@@ -23,4 +23,8 @@ public class UnionAfflication implements Afflication {
 		this.amount = amount;
 	}
 
+	public double getDues() {
+		return 0;
+	}
+
 }

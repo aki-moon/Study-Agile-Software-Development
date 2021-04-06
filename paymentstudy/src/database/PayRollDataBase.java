@@ -28,4 +28,8 @@ public class PayRollDataBase {
 		itsEmployees.put(memberId, employee);
 	}
 
+	public static Employee getUnionMember() {
+		return null;
+	}
+
 }
