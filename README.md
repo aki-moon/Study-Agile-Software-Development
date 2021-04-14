@@ -5,7 +5,7 @@ https://www.amazon.co.jp/dp/4797347783
 ## bowlinggame
 本書中でペアプロでボーリングゲームをTDDで作っていく話をコードを書きながら理解していくためのリポジトリ。
 ## designpattern
-本書中で紹介されているデザインパターンについて、実装を写経していくためのリポジトリ。
+本書中で紹介されているデザインパターンについて、実装を写経&refactoringしていくためのリポジトリ。
 - 第13章 : active object
 - 第14章 : template method
 - 第15章 : mediator
