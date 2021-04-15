@@ -6,12 +6,11 @@ import org.junit.jupiter.api.Test;
 
 class ClockDriverTest {
 
-	@SuppressWarnings("unused")
 	@Test
 	void clockDriverTest() {
 		MockTimeSource source = new MockTimeSource();
-		MockTimeSinc sink = new MockTimeSinc();
-		ClockDriver driver = new ClockDriver(source, sink);
+		MockTimeSink sink = new MockTimeSink();
+		source.setObserver(sink);
 		source.setTime(3, 4, 5);
 		assertEquals(3, sink.hours());
 		assertEquals(4, sink.minutes());

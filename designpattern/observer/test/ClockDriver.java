@@ -1,18 +1,17 @@
 package agilesoftwaredevelopment.designpattern.observer.test;
 
 import agilesoftwaredevelopment.designpattern.observer.src.ClockObserver;
-import agilesoftwaredevelopment.designpattern.observer.src.TimeSink;
 
 public class ClockDriver implements ClockObserver {
-	private TimeSink sink;
+	private ClockObserver observer;
 
-	public ClockDriver(MockTimeSource source, MockTimeSinc sink) {
+	public ClockDriver(MockTimeSource source, MockTimeSink sink) {
 		source.setObserver(this);
-		this.sink = sink;
+		this.observer = sink;
 	}
 
 	public void update(int hours, int minutes, int seconds) {
-		sink.setTime(hours, minutes, seconds);
+		observer.update(hours, minutes, seconds);
 	}
 
 }
