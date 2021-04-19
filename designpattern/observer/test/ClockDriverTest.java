@@ -24,12 +24,19 @@ class ClockDriverTest {
 		assertSinkEquals(sink, 7, 8, 9);
 	}
 
+	@Test
+	void multipleSinkTest() {
+		MockTimeSink sink2 = new MockTimeSink();
+		source.registerObserver(sink2);
+		source.setTime(12, 13, 14);
+		assertSinkEquals(sink, 12, 13, 14);
+		assertSinkEquals(sink2, 12, 13, 14);
+	}
+
 	private void assertSinkEquals(MockTimeSink mockTimeSink, int hours, int minutes, int seconds) {
 		assertEquals(hours, sink.hours());
 		assertEquals(minutes, sink.minutes());
 		assertEquals(seconds, sink.seconds());
 	}
-
-
 
 }
