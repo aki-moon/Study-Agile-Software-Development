@@ -1,21 +1,22 @@
 package agilesoftwaredevelopment.designpattern.observer.test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import agilesoftwaredevelopment.designpattern.observer.src.ClockObserver;
 import agilesoftwaredevelopment.designpattern.observer.src.TimeSource;
 
 public class MockTimeSource implements TimeSource {
-	private ClockObserver observer;
+	private List<ClockObserver> itsObservers = new ArrayList<ClockObserver>();
 
 	public void setTime(int hours, int minutes, int seconds) {
-		observer.update(hours, minutes, seconds);
+		for (ClockObserver clockObserver : itsObservers) {
+			clockObserver.update(hours, minutes, seconds);
+		}
 	}
 
-	public void setObserver(ClockObserver observer) {
-		this.observer = observer;
-	}
-
-	public void registerObserver(MockTimeSink sink) {
-
+	public void registerObserver(ClockObserver observer) {
+		itsObservers.add(observer);
 	}
 
 }
