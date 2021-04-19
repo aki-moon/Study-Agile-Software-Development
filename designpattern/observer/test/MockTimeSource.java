@@ -14,4 +14,8 @@ public class MockTimeSource implements TimeSource {
 		this.observer = observer;
 	}
 
+	public void registerObserver(MockTimeSink sink) {
+
+	}
+
 }

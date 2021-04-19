@@ -2,23 +2,34 @@ package agilesoftwaredevelopment.designpattern.observer.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class ClockDriverTest {
+	private MockTimeSource source;
+	private MockTimeSink sink;
+
+	@BeforeEach
+	public void setup() {
+		source = new MockTimeSource();
+		sink = new MockTimeSink();
+		source.registerObserver(sink);
+	}
 
 	@Test
-	void clockDriverTest() {
-		MockTimeSource source = new MockTimeSource();
-		MockTimeSink sink = new MockTimeSink();
-		source.setObserver(sink);
+	void timeChangeTest() {
 		source.setTime(3, 4, 5);
-		assertEquals(3, sink.hours());
-		assertEquals(4, sink.minutes());
-		assertEquals(5, sink.seconds());
+		assertSinkEquals(sink, 3, 4, 5);
 		source.setTime(7, 8, 9);
-		assertEquals(7, sink.hours());
-		assertEquals(8, sink.minutes());
-		assertEquals(9, sink.seconds());
+		assertSinkEquals(sink, 7, 8, 9);
 	}
+
+	private void assertSinkEquals(MockTimeSink mockTimeSink, int hours, int minutes, int seconds) {
+		assertEquals(hours, sink.hours());
+		assertEquals(minutes, sink.minutes());
+		assertEquals(seconds, sink.seconds());
+	}
+
+
 
 }
