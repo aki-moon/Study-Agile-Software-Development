@@ -14,5 +14,8 @@ https://www.amazon.co.jp/dp/4797347783
 - 第17章 : null object
 - 第23章 : composite
 - 第24章 : observer
+- 第25章 : Abstract Server
+- 第25章 : Adapter
+- 第25章 : Bridge
 ## PaymentStudy
 本書中で構築される給与体系システムを自分で実装してみるためのリポジトリ
