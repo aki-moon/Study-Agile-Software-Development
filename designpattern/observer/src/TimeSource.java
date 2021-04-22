@@ -6,7 +6,7 @@ import java.util.List;
 public class TimeSource {
 	private List<ClockObserver> itsObservers = new ArrayList<ClockObserver>();
 
-	public void notify(int hours, int minutes, int seconds) {
+	protected void notify(int hours, int minutes, int seconds) {
 		for (ClockObserver clockObserver : itsObservers) {
 			clockObserver.update(hours, minutes, seconds);
 		}
