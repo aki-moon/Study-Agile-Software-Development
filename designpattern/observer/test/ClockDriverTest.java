@@ -12,7 +12,7 @@ class ClockDriverTest {
 	@BeforeEach
 	public void setup() {
 		source = new MockTimeSource();
-		sink = new MockTimeSink();
+		sink = new MockTimeSink(source);
 		source.registerObserver(sink);
 	}
 
@@ -26,7 +26,7 @@ class ClockDriverTest {
 
 	@Test
 	void multipleSinkTest() {
-		MockTimeSink sink2 = new MockTimeSink();
+		MockTimeSink sink2 = new MockTimeSink(source);
 		source.registerObserver(sink2);
 		source.setTime(12, 13, 14);
 		assertSinkEquals(sink, 12, 13, 14);

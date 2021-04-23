@@ -1,5 +1,5 @@
 package agilesoftwaredevelopment.designpattern.observer.src;
 
-public interface ClockObserver {
+public interface Observer {
 	public void update();
 }

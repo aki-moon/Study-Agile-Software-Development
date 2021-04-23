@@ -1,5 +1,10 @@
 package agilesoftwaredevelopment.designpattern.observer.src;
 
 public interface TimeSource {
-	public void registerObserver(ClockObserver clockObserver);
+	public int getHours();
+
+	public int getMinutes();
+
+	public int getSeconds();
+
 }
