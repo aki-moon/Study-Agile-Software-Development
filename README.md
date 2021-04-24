@@ -17,5 +17,7 @@ https://www.amazon.co.jp/dp/4797347783
 - 第25章 : Abstract Server
 - 第25章 : Adapter
 - 第25章 : Bridge
+- 第26章 : Proxy
+- 第26章 : StairWay to Heaven
 ## PaymentStudy
 本書中で構築される給与体系システムを自分で実装してみるためのリポジトリ
